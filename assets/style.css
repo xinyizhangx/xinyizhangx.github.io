@@ -5,8 +5,3 @@
   --gutter: calc(var(--font-size) * 1.618);
   --space: 10px;
 }
-
-body {
-  display: flex;
-  flex-direction: column;
-}
