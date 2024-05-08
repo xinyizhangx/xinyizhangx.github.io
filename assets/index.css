@@ -52,17 +52,16 @@ main section:nth-child(2n) img {
   width: 100%;
 }
 
-main section > a {
-  width: 50%;
+main section img {
+  width: 100%;
   height: 100%;
 }
 
-main section:nth-child(5) > a {
-  display: flex;
-  justify-content: flex-end;
+main section:nth-child(5) {
+  justify-content: space-between;
 }
 
-main section > div {
+main section .project {
   width: 50%;
   height: 90%;
   font-size: calc((var(--font-size) / 1.5));
@@ -70,18 +69,15 @@ main section > div {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  text-align: left;
 }
-main section:nth-child(2n) > div {
-  text-align: right;
-}
-main section > div a {
+
+main section .project a {
   color: var(--color-blue);
 }
-main section > div h1 {
+main section .project h1 {
   font-size: calc(var(--font-size) * 2);
 }
-main section > div a {
+main section .project a {
   font-size: calc(var(--font-size));
 }
 
@@ -92,6 +88,16 @@ main section img {
 }
 main section img:hover {
   opacity: 100%;
+}
+main section:nth-child(2n) .img {
+  width: 50%;
+  height: 100%;
+}
+main section .img {
+  height: 100%;
+}
+main section:nth-child(2n) .project {
+  text-align: right;
 }
 
 footer {
@@ -112,10 +118,10 @@ footer {
   header h1 {
     font-size: calc(var(--font-size) / 1.5);
   }
-  main section > div a {
+  main section .project a {
     font-size: calc(var(--font-size) / 1.5);
   }
-  main section > div h1 {
+  main section .project h1 {
     font-size: calc(var(--font-size) / 1.2);
   }
   footer {
@@ -132,13 +138,13 @@ footer {
   header h1 {
     font-size: calc(var(--font-size) / 1.2);
   }
-  main section > div {
+  main section .project {
     height: 70%;
   }
-  main section > div a {
+  main section .project a {
     font-size: calc(var(--font-size) / 1.2);
   }
-  main section > div h1 {
+  main section .project h1 {
     font-size: calc(var(--font-size));
   }
   footer {
@@ -159,10 +165,10 @@ footer {
   main {
     height: calc(100% - var(--space) * 32);
   }
-  main section > div a {
+  main section .project a {
     font-size: calc(var(--font-size) * 2);
   }
-  main section > div h1 {
+  main section .project h1 {
     font-size: calc(var(--font-size) * 2.4);
   }
   footer {
@@ -194,5 +200,18 @@ footer {
 @media screen and (min-width: 1512px) and (max-width: 1728px) {
   .container {
     padding: 0% 15%;
+  }
+  header {
+    margin-top: calc(var(--space) * 3);
+    margin-bottom: calc(var(--space) * 6);
+  }
+  header h1 {
+    font-size: calc(var(--font-size) * 1.8);
+  }
+  main section .project a {
+    font-size: calc(var(--font-size) * 1.2);
+  }
+  footer {
+    margin-top: calc(var(--space) * 3);
   }
 }
